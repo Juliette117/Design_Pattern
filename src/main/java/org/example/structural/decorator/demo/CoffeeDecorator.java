@@ -1,0 +1,20 @@
+package org.example.structural.decorator.demo;
+
+public abstract class CoffeeDecorator implements Coffee {
+
+    protected Coffee coffee;
+
+    public CoffeeDecorator(Coffee coffee) {
+        this.coffee = coffee;
+    }
+
+    @Override
+    public String getDescription() {
+        return "";
+    }
+
+    @Override
+    public double getPrice() {
+        return coffee.getPrice();
+    }
+}
